@@ -13,7 +13,7 @@
 <CenteredTextOnlyHero
 	title="Ship AI features in minutes, not months"
 	subtitle="Transform complex AI workflows into deployable solutions with simplified agent architecture. Stop letting 3-6 month development cycles delay your product releases."
-	imageSrc="/generated/image-abstract-geometric-shapes-representing-ai.webp"
+	imageSrc="/generated/image-a-group-of-people-in-a-minimalist-contro.webp"
 />
 <LogoScroller label="" />
 
@@ -31,7 +31,7 @@
 			quote:
 				"We shipped our AI onboarding feature in under a week. Before Agentify, this would have taken 3 months minimum and cost us $180K in development resources.",
 			image:
-				"/generated/image-a-professional-woman-in-a-modern-workspa.webp"
+				"/generated/image-a-person-sitting-at-a-sleek-modern-desk-.webp"
 		},
 		{
 			name: "Kai Okafor",
@@ -40,7 +40,7 @@
 			quote:
 				"Our engineers saved 4 weeks of sprint time. Agentify eliminated the risk of building AI infrastructure from scratch while cutting our prototype costs by 85%.",
 			image:
-				"/generated/image-a-professional-man-in-a-casual-yet-trend.webp"
+				"/generated/image-a-small-team-collaborating-in-a-minimali.webp"
 		},
 		{
 			name: "Valencia Torres",
@@ -49,7 +49,7 @@
 			quote:
 				"We avoided hiring two additional AI engineers, saving us $320K annually. The drag-and-drop interface meant zero technical debt and faster feature iteration.",
 			image:
-				"/generated/image-a-professional-woman-a-vp-executive-is-i.webp"
+				"/generated/image-a-group-of-professionals-engaged-in-a-th.webp"
 		}
 	]}
 />
@@ -92,7 +92,7 @@
 		{
 			title: "Accelerate feature launches from months to minutes",
 			description: "When product roadmaps demand AI-powered features but development cycles stretch 3-6 months, Agentify's drag-and-drop builder helps product managers ship intelligent onboarding, personalization, and recommendation features in under a week.",
-			image: "/generated/image-a-product-manager-enthusiastically-discu.webp",
+			image: "/generated/image-a-poised-individual-standing-confidently.webp",
 			link: {
 				href: "/use-cases/rapid-feature-deployment",
 				label: "Learn more"
@@ -101,7 +101,7 @@
 		{
 			title: "Scale engineering velocity without technical debt",
 			description: "Growing SaaS teams need AI capabilities without hiring specialized engineers or building complex infrastructure. Agentify's pre-built templates and simplified architecture eliminate technical debt while reducing AI development costs by 85%.",
-			image: "/generated/image-a-diverse-saas-engineering-team-collabor.webp",
+			image: "/generated/image-two-colleagues-collaborating-in-a-contem.webp",
 			link: {
 				href: "/use-cases/engineering-acceleration",
 				label: "Learn more"
@@ -110,7 +110,7 @@
 		{
 			title: "Transform customer support with intelligent automation",
 			description: "When support volumes overwhelm teams and response times suffer, Agentify helps deploy smart routing agents, automated resolution workflows, and predictive support that improves customer satisfaction while reducing manual work.",
-			image: "/generated/image-customer-support-team-using-intelligent-.webp",
+			image: "/generated/image-a-scene-of-a-professional-team-working-t.webp",
 			link: {
 				href: "/use-cases/intelligent-customer-support",
 				label: "Learn more"
