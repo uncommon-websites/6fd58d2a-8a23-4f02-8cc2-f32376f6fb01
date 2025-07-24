@@ -49,7 +49,7 @@
 			quote:
 				"We avoided hiring two additional AI engineers, saving us $320K annually. The drag-and-drop interface meant zero technical debt and faster feature iteration.",
 			image:
-				"/generated/image-a-professional-woman-in-a-tailored-suit-.webp"
+				"/generated/image-a-professional-woman-a-vp-executive-is-i.webp"
 		}
 	]}
 />
@@ -110,7 +110,7 @@
 		{
 			title: "Transform customer support with intelligent automation",
 			description: "When support volumes overwhelm teams and response times suffer, Agentify helps deploy smart routing agents, automated resolution workflows, and predictive support that improves customer satisfaction while reducing manual work.",
-			image: "/generated/image-a-customer-support-team-in-a-vibrant-off.webp",
+			image: "/generated/image-customer-support-team-using-intelligent-.webp",
 			link: {
 				href: "/use-cases/intelligent-customer-support",
 				label: "Learn more"
