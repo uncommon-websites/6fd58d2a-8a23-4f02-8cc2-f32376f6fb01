@@ -13,7 +13,6 @@
 <Hero
 	title="Ship AI features in minutes, not months"
 	subtitle="Transform complex AI workflows into deployable solutions with simplified agent architecture. Stop letting 3-6 month development cycles delay your product releases."
-	imageSrc="/generated/image-a-product-manager-in-a-modern-office-env.webp"
 	centered={false}
 />
 <LogoScroller label="" />

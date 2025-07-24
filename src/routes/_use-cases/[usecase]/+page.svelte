@@ -18,7 +18,6 @@
 <Hero
 	title={data.hero.title}
 	subtitle={data.hero.subtitle}
-	imageSrc={data.hero.imageSrc}
 	callsToAction={data.hero.callsToAction}
 />
 {/if}

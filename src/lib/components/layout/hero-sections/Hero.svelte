@@ -36,17 +36,11 @@
 	// Constants
 	import { cta } from "$lib/navigation";
 
-	function handleImageError(e: Event) {
-		const target = e.currentTarget as HTMLImageElement;
-		target.src = "https://placehold.co/800x600/f8fafc/64748b?text=Hero+image";
-	}
-
 	// Types
 	type Props = {
 		centered?: boolean;
 		title: string;
 		subtitle: string;
-		imageSrc?: string;
 		callsToAction?: Array<{
 			href: string;
 			label: string;
@@ -56,17 +50,21 @@
 	let {
 		title,
 		subtitle,
-		imageSrc,
 		callsToAction = [cta],
 		centered = false,
 		...rest
 	}: Props = $props();
 </script>
 
-<div class="bg-background" {...rest}>
+<div class="relative overflow-hidden bg-gradient-to-br from-background via-background to-muted/20" {...rest}>
+	<!-- Subtle pattern overlay -->
+	<div class="absolute inset-0 opacity-[0.02]">
+		<div class="h-full w-full bg-[radial-gradient(circle_at_1px_1px,_theme(colors.foreground)_1px,_transparent_0)] bg-[length:24px_24px]"></div>
+	</div>
+	
 	<header
 		class={[
-			"section-px container mx-auto grid items-end gap-16 gap-y-9 py-12 pt-24 text-balance",
+			"relative section-px container mx-auto grid items-center gap-16 gap-y-9 section-py text-balance",
 			centered ? "place-items-center text-center" : " xl:grid-cols-[1fr_auto]"
 		]}
 		data-enter-container
@@ -111,15 +109,4 @@
 			</div>
 		{/if}
 	</header>
-
-	{#if imageSrc}
-		<div class="col-span-full aspect-video" data-enter>
-			<img
-				src={imageSrc}
-				alt="Customer"
-				class="size-full object-cover"
-				onerror={handleImageError}
-			/>
-		</div>
-	{/if}
 </div>
