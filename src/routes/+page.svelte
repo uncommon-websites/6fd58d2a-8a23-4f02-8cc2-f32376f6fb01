@@ -6,14 +6,14 @@
 	import CallToAction from "$lib/components/layout/CallToAction.svelte";
 	import AboutTeaser from "$lib/components/layout/AboutTeaser.svelte";
 	import LogoScroller from "$lib/components/layout/LogoScroller.svelte";
-	import Hero from "$lib/components/layout/hero-sections/Hero.svelte";
+	import CenteredTextOnlyHero from "$lib/components/layout/hero-sections/CenteredTextOnlyHero.svelte";
 	import UseCases from "$lib/components/layout/UseCases.svelte";
 </script>
 
-<Hero
+<CenteredTextOnlyHero
 	title="Ship AI features in minutes, not months"
 	subtitle="Transform complex AI workflows into deployable solutions with simplified agent architecture. Stop letting 3-6 month development cycles delay your product releases."
-	centered={false}
+	imageSrc="/generated/image-abstract-geometric-shapes-representing-ai.webp"
 />
 <LogoScroller label="" />
 
