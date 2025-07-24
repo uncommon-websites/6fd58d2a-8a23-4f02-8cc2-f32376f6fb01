@@ -37,7 +37,7 @@
 	<!-- Theme Controls -->
 	<div class="fixed top-4 right-4 z-50">
 		<Button variant="secondary" size="sm" onclick={() => (showControls = !showControls)}>
-			<span class="size-4">{@html IconSettings()}</span>
+			<IconSettings class="size-4" />
 		</Button>
 
 		{#if showControls}
@@ -45,7 +45,7 @@
 				class="bg-card border-border absolute top-12 right-0 w-80 space-y-4 rounded-lg border p-4 shadow-lg"
 			>
 				<div class="mb-4 flex items-center gap-2">
-					<span class="text-primary size-4">{@html IconPalette()}</span>
+					<IconPalette class="text-primary size-4" />
 					<h3 class="text-headline font-medium">Theme Controls</h3>
 				</div>
 
