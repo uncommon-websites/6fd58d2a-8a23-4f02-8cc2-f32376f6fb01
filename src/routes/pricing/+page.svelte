@@ -17,31 +17,28 @@
 <Testimonials
 	testimonials={[
 		{
-			name: "Jane Smith",
-			position: "CTO",
-			company: "Tech Innovations",
+			name: "Mason Liu",
+			position: "Head of Product",
+			company: "Flowy",
 			quote:
-				"This solution transformed our workflow and increased productivity by 35% in just two months.",
-			image:
-				"https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+				"We shipped our first AI feature in 6 days. Before Agentify, it took 3 months just to scope a prototype.",
+			image: "/generated/image-an-asian-woman-in-her-30s-wearing-a-smar.webp"
 		},
 		{
-			name: "John Doe",
-			position: "Director of Operations",
-			company: "Global Solutions",
+			name: "Caitlyn Solace",
+			position: "Engineering Manager",
+			company: "Stanza",
 			quote:
-				"The implementation was seamless and the support team was exceptional throughout the process.",
-			image:
-				"https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+				"The drag-and-drop builder was a game changer—our PMs now design 80% of AI workflows without us.",
+			image: "/generated/image-a-confident-hispanic-woman-in-her-30s-we.webp"
 		},
 		{
-			name: "Sarah Johnson",
-			position: "Product Manager",
-			company: "Future Systems",
+			name: "Theo Vasquez",
+			position: "VP of Customer Experience",
+			company: "Loopdesk",
 			quote:
-				"We've tried multiple solutions, but this is the only one that perfectly addressed all our requirements.",
-			image:
-				"https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&estimonial-3.jpg"
+				"Agentify cut our support response time by 63%. It's like having a full-time junior agent in every inbox.",
+			image: "/generated/image-a-focused-black-man-in-his-40s-wearing-a.webp"
 		}
 	]}
 />

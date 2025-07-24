@@ -28,123 +28,166 @@ Please update features according to the company's product offering. Do not remov
 	// Components
 	import Button from "$lib/components/ui/Button.svelte";
 	import SectionHeader from "./SectionHeader.svelte";
-	import IconCheck from "~icons/lucide/check";
-	import IconX from "~icons/lucide/x";
+	// Icon components
+	function IconCheck() {
+		return `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>`;
+	}
+	function IconX() {
+		return `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>`;
+	}
 	import NumberFlow from "@number-flow/svelte";
 	import LogoScroller from "./LogoScroller.svelte";
 
 	// Props
 	const {
-		title = "Simple, transparent pricing",
-		subtitle = "Choose the plan that works best for your needs",
-		tierNames = ["Starter", "Pro", "Enterprise"],
+		title = "Scale your AI automation",
+		subtitle = "From rapid prototyping to enterprise deployment — choose the plan that accelerates your AI journey",
+		tierNames = ["Developer", "Team", "Enterprise"],
 		features = [
 			{
-				name: "Projects",
+				name: "AI agents per month",
 				tiers: {
-					Starter: "5",
-					Pro: "Unlimited",
+					Developer: "100",
+					Team: "1,000",
 					Enterprise: "Unlimited"
 				}
 			},
 			{
 				name: "Team members",
 				tiers: {
-					Starter: "1",
-					Pro: "10",
+					Developer: "3",
+					Team: "15",
 					Enterprise: "Unlimited"
 				}
 			},
 			{
-				name: "Storage",
+				name: "Agent templates",
 				tiers: {
-					Starter: "1GB",
-					Pro: "10GB",
+					Developer: "50+",
+					Team: "200+",
+					Enterprise: "500+"
+				}
+			},
+			{
+				name: "Drag-and-drop builder",
+				tiers: {
+					Developer: true,
+					Team: true,
+					Enterprise: true
+				}
+			},
+			{
+				name: "API integrations",
+				tiers: {
+					Developer: "10",
+					Team: "100",
 					Enterprise: "Unlimited"
 				}
 			},
 			{
-				name: "API access",
+				name: "Deployment environments",
 				tiers: {
-					Starter: false,
-					Pro: true,
+					Developer: "Development",
+					Team: "Dev + Staging",
+					Enterprise: "Multi-environment"
+				}
+			},
+			{
+				name: "Analytics & monitoring",
+				tiers: {
+					Developer: "Basic",
+					Team: "Advanced",
+					Enterprise: "Enterprise"
+				}
+			},
+			{
+				name: "Version control",
+				tiers: {
+					Developer: false,
+					Team: true,
 					Enterprise: true
 				}
 			},
 			{
-				name: "Custom domains",
+				name: "Custom model support",
 				tiers: {
-					Starter: false,
-					Pro: true,
-					Enterprise: true
-				}
-			},
-			{
-				name: "Analytics",
-				tiers: {
-					Starter: "Basic",
-					Pro: "Advanced",
-					Enterprise: "Advanced"
+					Developer: false,
+					Team: "OpenAI, Anthropic",
+					Enterprise: "Any model"
 				}
 			},
 			{
 				name: "Support response time",
 				tiers: {
-					Starter: "24 hours",
-					Pro: "4 hours",
-					Enterprise: "1 hour"
+					Developer: "48 hours",
+					Team: "12 hours",
+					Enterprise: "4 hours"
 				}
 			},
 			{
-				name: "Dedicated account manager",
+				name: "SSO & advanced security",
 				tiers: {
-					Starter: false,
-					Pro: false,
+					Developer: false,
+					Team: false,
 					Enterprise: true
 				}
 			},
 			{
-				name: "SLA",
+				name: "Dedicated success manager",
 				tiers: {
-					Starter: false,
-					Pro: false,
+					Developer: false,
+					Team: false,
+					Enterprise: true
+				}
+			},
+			{
+				name: "SLA guarantee",
+				tiers: {
+					Developer: false,
+					Team: "99.5%",
 					Enterprise: "99.9%"
 				}
 			}
 		],
 		tiers = [
 			{
-				name: "Starter",
-				monthlyPrice: 9.99,
-				yearlyPrice: 7.99, // 20% savings
-				description: "Perfect for individuals and small projects",
+				name: "Developer",
+				monthlyPrice: 29,
+				yearlyPrice: 24, // ~17% savings
+				description: "Perfect for product managers testing AI automation concepts",
 				features: [
-					"Up to 5 projects",
+					"100 AI agents per month",
+					"50+ pre-built templates",
+					"Drag-and-drop agent builder",
+					"Up to 3 team members",
+					"10 API integrations",
 					"Basic analytics",
-					"24-hour support response time",
-					"1GB storage"
+					"Community support"
 				],
 				cta: {
-					label: "Get started",
-					href: "/signup?plan=starter"
+					label: "Start free trial",
+					href: "/signup?plan=developer"
 				}
 			},
 			{
-				name: "Pro",
-				monthlyPrice: 29.99,
-				yearlyPrice: 23.99, // 20% savings
-				description: "For growing teams and businesses",
+				name: "Team",
+				monthlyPrice: 149,
+				yearlyPrice: 124, // ~17% savings
+				description: "For growing teams shipping AI-powered features to production",
 				features: [
-					"Unlimited projects",
+					"1,000 AI agents per month",
+					"200+ pre-built templates",
+					"Advanced workflow builder",
+					"Up to 15 team members",
+					"100 API integrations",
+					"Version control & rollbacks",
+					"Staging environments",
 					"Advanced analytics",
-					"4-hour support response time",
-					"10GB storage",
-					"Custom domains",
-					"Team collaboration tools"
+					"Priority support"
 				],
 				cta: {
-					label: "Get started",
-					href: "/signup?plan=pro"
+					label: "Start free trial",
+					href: "/signup?plan=team"
 				},
 				highlight: true
 			},
@@ -152,15 +195,18 @@ Please update features according to the company's product offering. Do not remov
 				name: "Enterprise",
 				monthlyPrice: null,
 				yearlyPrice: null,
-				description: "For large organizations with specific needs",
+				description: "For organizations deploying AI at scale with custom requirements",
 				features: [
-					"Everything in Pro",
-					"Dedicated account manager",
-					"1-hour support response time",
-					"Unlimited storage",
-					"Advanced security features",
+					"Unlimited AI agents",
+					"500+ enterprise templates",
+					"Custom model integration",
+					"Unlimited team members",
+					"Multi-environment deployment",
+					"SSO & advanced security",
 					"Custom integrations",
-					"99.9% uptime SLA"
+					"Dedicated success manager",
+					"99.9% SLA guarantee",
+					"On-premise deployment options"
 				],
 				cta: {
 					label: "Contact sales",
@@ -197,7 +243,7 @@ Please update features according to the company's product offering. Do not remov
 					class="rounded-full px-4 py-1.5 text-sm font-semibold transition-all duration-200 {annual ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-600 hover:text-gray-900'}"
 					onclick={() => (annual = true)}
 				>
-					Annual <span class="text-xs ml-1 text-gray-500">Save 20%</span>
+					Annual <span class="text-xs ml-1 text-gray-500">Save 17%</span>
 				</button>
 			</div>
 		</div>
@@ -239,7 +285,7 @@ Please update features according to the company's product offering. Do not remov
 					<ul class="space-y-3">
 						{#each tier.features as feature}
 							<li class="flex items-center gap-2">
-								<IconCheck class="text-primary-600 dark:text-primary-400 size-5 flex-shrink-0" />
+								<span class="text-primary-600 dark:text-primary-400 size-5 flex-shrink-0">{@html IconCheck()}</span>
 								<span class="text-body text-emphasis-medium dark:text-gray-300">{feature}</span>
 							</li>
 						{/each}
@@ -337,9 +383,9 @@ Please update features according to the company's product offering. Do not remov
 									<td class="py-3">
 										{#if typeof feature.tiers[tierName] === "boolean"}
 											{#if feature.tiers[tierName]}
-												<IconCheck class="text-primary-900 dark:text-primary-400 size-5" />
+												<span class="text-primary-900 dark:text-primary-400 size-5 flex-shrink-0">{@html IconCheck()}</span>
 											{:else}
-												<IconX class="size-5 text-gray-400" />
+												<span class="size-5 text-gray-400 flex-shrink-0">{@html IconX()}</span>
 											{/if}
 										{:else}
 											<span class="text-callout font-medium text-gray-700 dark:text-gray-300">

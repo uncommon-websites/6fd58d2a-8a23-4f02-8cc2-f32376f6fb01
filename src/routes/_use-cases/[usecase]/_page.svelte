@@ -14,22 +14,39 @@
 	const { data }: PageProps = $props();
 </script>
 
+{#if data.hero}
 <Hero
 	title={data.hero.title}
 	subtitle={data.hero.subtitle}
 	imageSrc={data.hero.imageSrc}
 	callsToAction={data.hero.callsToAction}
 />
+{/if}
 
+{#if data.summary}
 <Summary title={data.summary.title} text={data.summary.text} />
+{/if}
 
-<Testimonials testimonials={data.testimonials} />
+{#if data.testimonials}
+<Testimonials testimonials={data.testimonials.map(t => ({
+	name: t.author,
+	position: t.role,
+	company: '',
+	quote: t.quote,
+	image: t.imageSrc
+}))} />
+{/if}
 
+{#if data.features}
 <Features
 	title={data.features.title}
 	subtitle={data.features.subtitle}
-	features={data.features.items}
+	features={data.features.items.map(item => ({
+		...item,
+		icon: undefined // Convert string icon to undefined since Features expects ComponentType
+	}))}
 />
+{/if}
 
 {#if data.cta}
 	<CallToAction

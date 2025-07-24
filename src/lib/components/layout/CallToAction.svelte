@@ -50,10 +50,10 @@
 
 	// Props
 	const {
-		title = "Get started today",
-		subtitle = "Join now",
-		description = "Ready to experience the difference? Join our community of satisfied customers and see how our solution can transform your workflow. ",
-		imageSrc = "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+		title = "AI automation in minutes, not months",
+		subtitle = "Join engineering teams shipping AI 10x faster",
+		description = "Don't let complexity kill your roadmap. Agentify gives your team the tools to go from prototype to production—without hiring AI specialists or rebuilding your backend. Ship your first agent in under an hour.",
+		imageSrc = "/generated/image-a-joyful-product-manager-sitting-at-a-co.webp",
 		callsToAction = [cta],
 		...rest
 	}: {

@@ -60,7 +60,37 @@ export const navigation: NavItem[] = [
 		showInNav: true,
 		showInFooter: false
 	},
-
+	{
+		label: "Use Cases",
+		showInNav: true,
+		showInFooter: true,
+		children: [
+			{
+				label: "Rapid Feature Deployment",
+				href: "/use-cases/rapid-feature-deployment",
+				image: "/generated/image-a-product-manager-enthusiastically-discu.webp",
+				description: "Accelerate feature launches from months to minutes with drag-and-drop AI builders that help product managers ship intelligent onboarding, personalization, and recommendation features in under a week.",
+				showInNav: true,
+				showInFooter: true
+			},
+			{
+				label: "Engineering Acceleration",
+				href: "/use-cases/engineering-acceleration",
+				image: "/generated/image-a-diverse-saas-engineering-team-collabor.webp",
+				description: "Scale engineering velocity without technical debt using pre-built templates and simplified architecture that eliminate complexity while reducing AI development costs by 85%.",
+				showInNav: true,
+				showInFooter: true
+			},
+			{
+				label: "Intelligent Customer Support",
+				href: "/use-cases/intelligent-customer-support",
+				image: "/generated/image-a-customer-support-team-in-a-vibrant-off.webp",
+				description: "Transform customer support with intelligent automation including smart routing agents, automated resolution workflows, and predictive support that improves satisfaction while reducing manual work.",
+				showInNav: true,
+				showInFooter: true
+			}
+		]
+	},
 	{
 		label: "Company",
 		showInNav: true,

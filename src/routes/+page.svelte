@@ -7,6 +7,7 @@
 	import AboutTeaser from "$lib/components/layout/AboutTeaser.svelte";
 	import LogoScroller from "$lib/components/layout/LogoScroller.svelte";
 	import Hero from "$lib/components/layout/hero-sections/Hero.svelte";
+	import UseCases from "$lib/components/layout/UseCases.svelte";
 </script>
 
 <Hero
@@ -15,68 +16,108 @@
 	imageSrc="/generated/image-a-product-manager-in-a-modern-office-env.webp"
 	centered={false}
 />
-<LogoScroller label="" generating />
+<LogoScroller label="" />
 
 <Summary
-	generating
 	title="What we do"
-	text="Our technology delivers measurable results through secure, adaptable solutions that directly increase productivity and drive growth."
+	text="Agentify transforms complex AI workflows into deployable solutions through simplified agent architecture. We help SaaS companies ship AI-powered features in minutes instead of months, eliminating the 3-6 month development cycles that delay product releases."
 />
 
 <Testimonials
-	generating
 	testimonials={[
 		{
-			name: "Jane Smith",
-			position: "CTO",
-			company: "Tech Innovations",
+			name: "Neha Raman",
+			position: "Product Lead",
+			company: "Finetro",
 			quote:
-				"Their cutting-edge automation boosted our productivity by 35%.\nThe intuitive interface reduced training time and improved team adoption.",
+				"We shipped our AI onboarding feature in under a week. Before Agentify, this would have taken 3 months minimum and cost us $180K in development resources.",
 			image:
-				"https://images.unsplash.com/photo-1571513722275-4b41940f54b8?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+				"/generated/image-a-professional-woman-in-a-modern-workspa.webp"
 		},
 		{
-			name: "John Doe",
-			position: "Director of Operations",
-			company: "Global Solutions",
+			name: "Kai Okafor",
+			position: "Director of Engineering",
+			company: "PulseStack",
 			quote:
-				"Their robust security protocols gave us confidence in handling sensitive data.\nThe 24/7 support team resolved issues within hours, not days.",
+				"Our engineers saved 4 weeks of sprint time. Agentify eliminated the risk of building AI infrastructure from scratch while cutting our prototype costs by 85%.",
 			image:
-				"https://images.unsplash.com/photo-1600603405959-6d623e92445c?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+				"/generated/image-a-professional-man-in-a-casual-yet-trend.webp"
 		},
 		{
-			name: "Sarah Johnson",
-			position: "Product Manager",
-			company: "Future Systems",
+			name: "Valencia Torres",
+			position: "VP of Product",
+			company: "DataFlow Systems",
 			quote:
-				"The scalable platform grew seamlessly with our business needs.\nTheir customization options allowed us to tailor solutions perfectly to our workflows.",
+				"We avoided hiring two additional AI engineers, saving us $320K annually. The drag-and-drop interface meant zero technical debt and faster feature iteration.",
 			image:
-				"https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+				"/generated/image-a-professional-woman-in-a-tailored-suit-.webp"
 		}
 	]}
 />
 
 <Features
-	generating
-	title="Features"
-	subtitle="Some features"
+	title="Why Agentify"
+	subtitle="Deploy intelligent AI agents in minutes with our simplified architecture that transforms complex workflows into drag-and-drop solutions"
 	features={[
 		{
-			title: "Streamlined Workflows",
-			description:
-				"Automate repetitive tasks and connect systems to improve productivity with our industry-leading 87% time savings."
+			title: "Drag-and-drop agent builder",
+			description: "Skip months of complex AI development with our visual interface that lets product teams create powerful agents without coding expertise."
 		},
 		{
-			title: "Data Analysis",
-			description:
-				"Extract meaningful insights from your data with powerful analytical tools backed by proprietary AI algorithms that are 3x more accurate than competitors."
+			title: "Pre-built workflow templates",
+			description: "Launch faster with battle-tested templates designed specifically for Series A-C SaaS companies to accelerate feature releases."
 		},
 		{
-			title: "Secure Collaboration",
-			description:
-				"Work together seamlessly while maintaining strict data privacy standards with our zero-knowledge architecture and military-grade encryption."
+			title: "Simplified agent architecture",
+			description: "Transform complex AI workflows into deployable solutions with our streamlined architecture that reduces implementation time by 90%."
+		},
+		{
+			title: "Rapid deployment pipeline",
+			description: "Ship AI-powered features in minutes, not months, with automated deployment that integrates seamlessly into existing development workflows."
+		},
+		{
+			title: "Enterprise-ready security",
+			description: "Deploy with confidence using industry-standard security protocols designed for mid-market SaaS companies handling sensitive customer data."
+		},
+		{
+			title: "Scalable agent management",
+			description: "Manage thousands of deployed agents through a unified dashboard that grows with your product and user engagement needs."
 		}
 	]}
 />
-<AboutTeaser generating />
-<CallToAction generating />
+
+<UseCases
+	title="Use Cases"
+	subtitle="Real-world applications transforming how SaaS companies deploy AI"
+	useCases={[
+		{
+			title: "Accelerate feature launches from months to minutes",
+			description: "When product roadmaps demand AI-powered features but development cycles stretch 3-6 months, Agentify's drag-and-drop builder helps product managers ship intelligent onboarding, personalization, and recommendation features in under a week.",
+			image: "/generated/image-a-product-manager-enthusiastically-discu.webp",
+			link: {
+				href: "/use-cases/rapid-feature-deployment",
+				label: "Learn more"
+			}
+		},
+		{
+			title: "Scale engineering velocity without technical debt",
+			description: "Growing SaaS teams need AI capabilities without hiring specialized engineers or building complex infrastructure. Agentify's pre-built templates and simplified architecture eliminate technical debt while reducing AI development costs by 85%.",
+			image: "/generated/image-a-diverse-saas-engineering-team-collabor.webp",
+			link: {
+				href: "/use-cases/engineering-acceleration",
+				label: "Learn more"
+			}
+		},
+		{
+			title: "Transform customer support with intelligent automation",
+			description: "When support volumes overwhelm teams and response times suffer, Agentify helps deploy smart routing agents, automated resolution workflows, and predictive support that improves customer satisfaction while reducing manual work.",
+			image: "/generated/image-a-customer-support-team-in-a-vibrant-off.webp",
+			link: {
+				href: "/use-cases/intelligent-customer-support",
+				label: "Learn more"
+			}
+		}
+	]}
+/>
+<AboutTeaser />
+<CallToAction />

@@ -1,14 +1,14 @@
-<script>
+<script lang="ts">
 	import Button from "$lib/components/ui/Button.svelte";
 	import Card from "$lib/components/ui/Card.svelte";
 	import Features from "$lib/components/layout/Features.svelte";
 
-	// Icons
-	import IconZap from "~icons/lucide/zap";
-	import IconShield from "~icons/lucide/shield";
-	import IconUsers from "~icons/lucide/users";
-	import IconSettings from "~icons/lucide/settings";
-	import IconPalette from "~icons/lucide/palette";
+	// Icon components - temporary until unplugin-icons is fixed
+	import IconZap from "$lib/components/icons/IconZap.svelte";
+	import IconShield from "$lib/components/icons/IconShield.svelte";
+	import IconUsers from "$lib/components/icons/IconUsers.svelte";
+	import IconSettings from "$lib/components/icons/IconSettings.svelte";
+	import IconPalette from "$lib/components/icons/IconPalette.svelte";
 
 	// Theme controls
 	let themeRadius = $state(8); // 0.5rem = 8px
@@ -37,7 +37,7 @@
 	<!-- Theme Controls -->
 	<div class="fixed top-4 right-4 z-50">
 		<Button variant="secondary" size="sm" onclick={() => (showControls = !showControls)}>
-			<IconSettings class="size-4" />
+			<span class="size-4">{@html IconSettings()}</span>
 		</Button>
 
 		{#if showControls}
@@ -45,14 +45,15 @@
 				class="bg-card border-border absolute top-12 right-0 w-80 space-y-4 rounded-lg border p-4 shadow-lg"
 			>
 				<div class="mb-4 flex items-center gap-2">
-					<IconPalette class="text-primary size-4" />
+					<span class="text-primary size-4">{@html IconPalette()}</span>
 					<h3 class="text-headline font-medium">Theme Controls</h3>
 				</div>
 
 				<!-- Radius Control -->
 				<div class="space-y-2">
-					<label class="text-sm font-medium">Border Radius: {themeRadius}px</label>
+					<label for="radius-control" class="text-sm font-medium">Border Radius: {themeRadius}px</label>
 					<input
+						id="radius-control"
 						type="range"
 						min="0"
 						max="24"
@@ -63,8 +64,9 @@
 
 				<!-- Primary Color Hue -->
 				<div class="space-y-2">
-					<label class="text-sm font-medium">Primary Hue: {primaryHue}°</label>
+					<label for="primary-hue-control" class="text-sm font-medium">Primary Hue: {primaryHue}°</label>
 					<input
+						id="primary-hue-control"
 						type="range"
 						min="0"
 						max="360"
@@ -75,8 +77,9 @@
 
 				<!-- Background Shade -->
 				<div class="space-y-2">
-					<label class="text-sm font-medium">Background: Gray-{backgroundShade}</label>
+					<label for="background-shade-control" class="text-sm font-medium">Background: Gray-{backgroundShade}</label>
 					<select
+						id="background-shade-control"
 						bind:value={backgroundShade}
 						class="border-border bg-background text-foreground w-full rounded border p-2"
 					>

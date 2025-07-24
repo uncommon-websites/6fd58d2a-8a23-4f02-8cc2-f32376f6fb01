@@ -9,11 +9,11 @@
 	import Card from "$lib/components/ui/Card.svelte";
 	import JobList, { type JobOpening } from "./JobList.svelte";
 
-	// Icons
-	import IconBriefcase from "~icons/lucide/briefcase";
-	import IconUsers from "~icons/lucide/users";
-	import IconHeart from "~icons/lucide/heart";
-	import IconGlobe from "~icons/lucide/globe";
+	// Icon components - temporary until unplugin-icons is fixed
+	import IconBriefcase from "$lib/components/icons/IconBriefcase.svelte";
+	import IconUsers from "$lib/components/icons/IconUsers.svelte";
+	import IconHeart from "$lib/components/icons/IconHeart.svelte";
+	import IconGlobe from "$lib/components/icons/IconGlobe.svelte";
 
 	// Constants
 	const SECTION_BASE_CLASSES = "section-py section-px container mx-auto";
@@ -24,18 +24,18 @@
 
 	const benefits = [
 		{
-			title: "Flexible Work",
-			description: "Remote-first with flexible hours that respect work-life balance.",
+			title: "Build product that launches—fast",
+			description: "At Agentify, we simplify complexity so you can build things that ship. You'll work on features that move from idea to production in days, not quarters.",
 			icon: IconBriefcase
 		},
 		{
-			title: "Growth Opportunities",
-			description: "Continuous learning with mentorship and education stipends.",
+			title: "Work on the future of AI",
+			description: "Our drag-and-drop agent builder turns AI from a research project into a product feature. You'll help teams go from proof-of-concept to production without the bottlenecks.",
 			icon: IconUsers
 		},
 		{
-			title: "Comprehensive Benefits",
-			description: "Health coverage, retirement plans, and generous paid time off.",
+			title: "Grow in a $297B market",
+			description: "AI is big and only getting bigger. We're building the tools developers actually want to use—yours could be the next one adopted by 100,000+ teams.",
 			icon: IconHeart
 		}
 	];
@@ -50,6 +50,13 @@
 			url: "#"
 		},
 		{
+			title: "AI/ML Engineer",
+			department: "Engineering",
+			location: "Remote",
+			type: "Full-time",
+			url: "#"
+		},
+		{
 			title: "Backend Engineer",
 			department: "Engineering",
 			location: "Remote",
@@ -57,7 +64,7 @@
 			url: "#"
 		},
 		{
-			title: "Design Engineer",
+			title: "DevOps Engineer",
 			department: "Engineering",
 			location: "Remote",
 			type: "Full-time",
@@ -66,14 +73,14 @@
 
 		// Design
 		{
-			title: "UX/UI Designer",
+			title: "Product Designer",
 			department: "Design",
 			location: "Remote",
 			type: "Full-time",
 			url: "#"
 		},
 		{
-			title: "Product Designer",
+			title: "UX Engineer",
 			department: "Design",
 			location: "Remote",
 			type: "Full-time",
@@ -82,14 +89,14 @@
 
 		// Product
 		{
-			title: "Product Manager",
+			title: "Product Manager - AI Tools",
 			department: "Product",
 			location: "Remote",
 			type: "Full-time",
 			url: "#"
 		},
 		{
-			title: "Product Analyst",
+			title: "Technical Product Manager",
 			department: "Product",
 			location: "Remote",
 			type: "Full-time",
@@ -98,21 +105,14 @@
 
 		// Marketing
 		{
-			title: "Marketing Specialist",
+			title: "Developer Relations",
 			department: "Marketing",
 			location: "Remote",
 			type: "Full-time",
 			url: "#"
 		},
 		{
-			title: "Content Strategist",
-			department: "Marketing",
-			location: "Remote",
-			type: "Full-time",
-			url: "#"
-		},
-		{
-			title: "Social Media Manager",
+			title: "Content Marketing Manager",
 			department: "Marketing",
 			location: "Remote",
 			type: "Full-time",
@@ -122,68 +122,82 @@
 
 	const employeeTestimonials = [
 		{
-			name: "Michael Chen",
-			position: "Senior Developer",
+			name: "Sarah Kim",
+			position: "Senior Software Engineer",
 			company: "Engineering Team",
 			quote:
-				"Working here has given me the opportunity to tackle challenging problems while maintaining a healthy work-life balance. The team culture is supportive and collaborative.",
+				"The growth opportunities here are incredible. In just 18 months, I've led three major features from concept to production and mentored two junior developers. Our engineering culture prioritizes learning—we have dedicated time for exploring new technologies and contributing to open source projects.",
 			image:
-				"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+				"/generated/image-a-professional-asian-woman-with-a-confid.webp"
 		},
 		{
-			name: "Priya Sharma",
-			position: "Product Designer",
+			name: "Marcus Thompson",
+			position: "Senior Product Manager",
+			company: "Product Team",
+			quote:
+				"What I love most is how we balance ambitious goals with sustainable work practices. We ship fast but never at the expense of quality or team wellbeing. The collaborative environment means I'm constantly learning from brilliant engineers, designers, and fellow PMs who challenge my thinking every day.",
+			image:
+				"/generated/image-a-professional-black-man-in-an-office-se.webp"
+		},
+		{
+			name: "Isabella Rodriguez",
+			position: "Junior UX Designer",
 			company: "Design Team",
 			quote:
-				"The creative freedom and opportunity to influence product decisions makes this the best place I've ever worked. I'm constantly learning and growing.",
+				"Starting my career at Agentify has been transformative. The mentorship program paired me with a senior designer who meets with me weekly, and I've already contributed to user research and interface design for our core agent builder. The company invests in junior talent—I feel valued, not overlooked.",
 			image:
-				"https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-		},
-		{
-			name: "Marcus Johnson",
-			position: "Marketing Lead",
-			company: "Marketing Team",
-			quote:
-				"I joined three years ago and have grown tremendously. The leadership truly invests in your development and the work environment is both challenging and supportive.",
-			image:
-				"https://images.unsplash.com/photo-1531384441138-2736e62e0919?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+				"/generated/image-a-professional-latina-designer-smiling-c.webp"
 		}
 	];
 
 	const processSteps = [
 		{
 			step: 1,
-			title: "Apply",
-			description:
-				"Submit your application through our careers portal with your resume and portfolio."
+			title: "Apply online",
+			description: "Share your resume and let us know why you're interested in joining Agentify."
 		},
 		{
 			step: 2,
-			title: "Interview",
-			description: "Meet with our team to discuss your experience, skills, and career aspirations."
+			title: "Intro call",
+			description: "A 30-minute conversation to get to know each other and discuss the role."
 		},
 		{
 			step: 3,
-			title: "Welcome aboard",
-			description: "Join our team and start your journey building the future with us."
+			title: "Project preview",
+			description: "A live session or simple take-home to show how you think and approach problems."
+		},
+		{
+			step: 4,
+			title: "Team chat",
+			description: "Meet the people you'd work with and ask them anything about the role or company."
+		},
+		{
+			step: 5,
+			title: "Decision",
+			description: "We'll follow up within a few days—no long waits or uncertainty."
 		}
 	];
 
 	const values = [
 		{
+			icon: IconBriefcase,
+			title: "Build together, ship fast",
+			description: "We collaborate closely and place high value on speed and execution—we ship often and iterate quickly."
+		},
+		{
 			icon: IconHeart,
-			title: "Passion",
-			description: "We're driven by a shared passion for innovation and excellence."
+			title: "Clarity over chaos",
+			description: "We simplify complexity for users and for ourselves. Clear thinking and communication help us build better."
 		},
 		{
 			icon: IconUsers,
-			title: "Collaboration",
-			description: "We believe in teamwork and collaboration to achieve great things."
+			title: "Ownership over titles",
+			description: "We care more about initiative than job descriptions. If something matters, it's yours to lead."
 		},
 		{
 			icon: IconGlobe,
-			title: "Global Impact",
-			description: "We're committed to making a positive impact on the world."
+			title: "Developer-first by default",
+			description: "We build tools we'd want to use. Simplicity, flexibility, and great UX guide everything we design."
 		}
 	];
 </script>
@@ -191,15 +205,14 @@
 <!-- Hero Section -->
 
 <SecondaryHero
-	generating
-	title="Join our team of innovators"
-	subtitle="We're looking for passionate people to help us build the future of digital experiences. Discover your next opportunity with us."
-	imageSrc="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+	title="Build the future of AI automation"
+	subtitle="Join a team of brilliant engineers, designers, and product minds who are transforming how developers build with AI. We're creating tools that turn complex workflows into simple, deployable solutions."
+	imageSrc="/generated/image-a-diverse-group-of-professionals-collabo.webp"
 />
 
 <!-- Why Join Us Section -->
-<section class={SECTION_BASE_CLASSES} generating>
-	<SectionHeader title="Why join us?" subtitle="Build your career while making an impact" />
+<section class={SECTION_BASE_CLASSES}>
+	<SectionHeader title="Why join us?" subtitle="No hype. Just real outcomes" />
 
 	<div class="mt-16 grid gap-4 md:grid-cols-3">
 		{#each benefits as benefit}
@@ -209,16 +222,16 @@
 </section>
 
 <!-- Culture Section -->
-<Culture {values} generating />
+<Culture {values} />
 
-<Testimonials testimonials={employeeTestimonials} generating />
+<Testimonials testimonials={employeeTestimonials} />
 
 <!-- Application Process -->
-<section class={SECTION_BASE_CLASSES} generating>
+<section class={SECTION_BASE_CLASSES}>
 	<div class="mx-auto">
 		<h2 class="text-title1 mb-16">Our application process</h2>
 
-		<div class="grid gap-12 md:grid-cols-3">
+		<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
 			{#each processSteps as { step, title, description }, i}
 				<div class="flex flex-col">
 					<div class="{ICON_CONTAINER_CLASSES} mb-6 size-11">
@@ -232,7 +245,7 @@
 	</div>
 </section>
 <!-- Current Openings Section -->
-<section class={GRADIENT_BG_CLASSES} generating>
+<section class={GRADIENT_BG_CLASSES}>
 	<div class="section-px section-py container mx-auto grid w-full items-start lg:grid-cols-2">
 		<SectionHeader title="Current openings" subtitle="Find your perfect role" />
 

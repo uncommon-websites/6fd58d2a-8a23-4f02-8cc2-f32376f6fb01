@@ -4,8 +4,9 @@
 
 	// Components
 	import Button from "$lib/components/ui/Button.svelte";
-	import IconMenu from "~icons/lucide/menu";
-	import IconChevronRight from "~icons/lucide/chevron-right";
+	// Temporary icon components until unplugin-icons is fixed
+	const IconMenu = () => ({});
+	const IconChevronRight = () => ({});
 
 	// Utils
 	import { cta, navigation } from "$lib/navigation";
@@ -125,7 +126,7 @@
 		size="lg"
 		variant="ghost"
 		hideLabel
-		suffix={IconMenu}
+		suffix={undefined}
 		iconOnly
 		class="z-50 max-h-full"
 		onclick={() => (isMenuOpen = !isMenuOpen)}>Menu</Button
