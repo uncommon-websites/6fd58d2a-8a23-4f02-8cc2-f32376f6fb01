@@ -10,10 +10,10 @@
 </script>
 
 <Hero
-	title="Elevate your business with thoughtful design"
-	subtitle="Solutions that enhance user experience, and improve visual communication."
-	imageSrc="/sample.png"
-	generating
+	title="Ship AI features in minutes, not months"
+	subtitle="Transform complex AI workflows into deployable solutions with simplified agent architecture. Stop letting 3-6 month development cycles delay your product releases."
+	imageSrc="/generated/image-a-product-manager-in-a-modern-office-env.webp"
+	centered={false}
 />
 <LogoScroller label="" generating />
 
